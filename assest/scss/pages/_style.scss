@@ -1,0 +1,63 @@
+.template_section {
+    max-width: 100%;
+    background-color: rgb(33 37 41);
+    min-height: 600px;
+
+}
+
+.template_section_flexbox {
+ @include flex(space-between);
+ padding-top: 60px;
+
+
+}
+
+.template_section_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 350px;
+    width: 638px;
+
+    h1 {
+        font-size: 48px;
+        color: white;
+    }
+
+    p {
+        font-size: 20px;
+        color: rgb(255 255 255 / 50%);
+    }
+}
+
+.template_section_img {
+    height: 400px;
+    width: 600px;
+    border-radius: 10px ;
+    overflow: hidden;
+}
+.template_section_text_buttons_box{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;     
+}
+.template_section_text_buttons_box :nth-child(1){
+    background-color: blue;
+    color: white;
+    @include flex;
+}
+.template_section_text_buttons_box :nth-child(2){
+    border: 2px solid white;
+    background-color: rgb(33 37 41);
+    color: white;
+    @include flex;
+}
+
+.template_section_text_buttons{
+    height: 50px;
+    width: 150px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+@import "../pages/footer"
