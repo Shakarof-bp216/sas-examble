@@ -6,8 +6,8 @@
 }
 
 .template_section_flexbox {
- @include flex(space-between);
- padding-top: 60px;
+    @include flex(space-between);
+    padding-top: 60px;
 
 
 }
@@ -16,9 +16,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    padding: 0 24px;
     height: 350px;
-    width: 638px;
+    width: 575px;
 
     h1 {
         font-size: 48px;
@@ -34,30 +34,63 @@
 .template_section_img {
     height: 400px;
     width: 600px;
-    border-radius: 10px ;
+    margin: 0 24px;
+    border-radius: 10px;
     overflow: hidden;
 }
-.template_section_text_buttons_box{
+
+@media only screen and (max-width: 1400px) {
+    .template_section_img {
+        height: 270px;
+        width: 405px;
+    }
+    .contanier{
+        width: 90%;
+    }
+
+    .template_section_flexbox {
+        padding: 116px;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .template_section_img {
+        display: none !important; 
+    }
+  
+    .template_section_text {
+        width: 100%;
+        text-align: center;
+    }
+    .template_section_text_buttons_box{
+        margin: auto;
+    }
+}
+
+
+.template_section_text_buttons_box {
     margin-top: 20px;
     display: flex;
-    gap: 20px;     
+    gap: 20px;
 }
-.template_section_text_buttons_box :nth-child(1){
+
+.template_section_text_buttons_box :nth-child(1) {
     background-color: blue;
     color: white;
     @include flex;
 }
-.template_section_text_buttons_box :nth-child(2){
+
+.template_section_text_buttons_box :nth-child(2) {
     border: 2px solid white;
     background-color: rgb(33 37 41);
     color: white;
     @include flex;
 }
 
-.template_section_text_buttons{
+.template_section_text_buttons {
     height: 50px;
     width: 150px;
     border-radius: 8px;
     font-size: 20px;
 }
+
 @import "../pages/footer"
